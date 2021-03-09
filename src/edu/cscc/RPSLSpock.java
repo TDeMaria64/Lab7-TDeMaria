@@ -2,7 +2,7 @@ package edu.cscc;
 import java.util.Random;
 
 /**
- * RPSLSpock game class
+ * Class to determine computer pick, validate user pick, and determine winner for RPSLSpock
  * @author Tristan DeMaria
  */
 public class RPSLSpock {
@@ -16,10 +16,11 @@ public class RPSLSpock {
     public static final String SPOCK = "spock";
 
     /**
-     * Method establishes whether the entered value is a valid pick or not
+     * Method establishes whether the user-entered value is a valid pick or not
      * @param pick
-     * Returns true if answer is rock, paper, scissors, lizard, or spock, returns false otherwise
+     * pick is the user-entered answer to be checked
      * @return boolean
+     * Returns true if answer is rock, paper, scissors, lizard, or spock, returns false otherwise
      */
     public static boolean isValidPick(String pick) {
         if (pick == null) {
@@ -60,8 +61,8 @@ public class RPSLSpock {
     }
 
     /**
-     * Method determines if the computer wins or not by comparing the computer pick and the human pick
-     * receives picks from Main and compares the two, then returns the boolean result. Only accounts for
+     * Method determines if the computer wins or not by comparing the computer pick and the human pick.
+     * Receives picks from Main and compares the two, then returns the boolean result. Only accounts for
      * computer wins, as anything else is a player win or a tie, which are accounted for in Main
      * @param c_pick computer pick
      * @param h_pick human pick
